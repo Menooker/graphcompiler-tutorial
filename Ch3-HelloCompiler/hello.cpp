@@ -16,7 +16,7 @@ int main()
     //auto mm1 = g.make("matmul_core", in->get_outputs(), {}, {});
     //auto relu = g.make("relu", mm1->get_outputs(), {}, {});
     auto relu = g.make("relu", {in->get_outputs()[0]}, {}, {});
-    auto add = g.make("add", {in->get_outputs()[0], in->get_outputs()[1]}, {}, {});
+    auto add = g.make("add", {relu->get_outputs()[0], in->get_outputs()[1]}, {}, {});
     auto out = g.make_output(add->get_outputs());
     std::cout << "Original Graph:\n";
     print_graph(g, std::cout, true);

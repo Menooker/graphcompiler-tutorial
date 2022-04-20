@@ -7,3 +7,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fopenmp")
 
 add_executable(hello Ch3-HelloCompiler/hello.cpp)
 target_link_libraries(hello graphcompiler dnnl)
+
+add_executable(tensorir Ch5-TensorIR/tensorir.cpp)
+target_link_libraries(tensorir graphcompiler)

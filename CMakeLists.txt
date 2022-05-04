@@ -10,3 +10,6 @@ target_link_libraries(hello graphcompiler dnnl)
 
 add_executable(tensorir Ch5-TensorIR/tensorir.cpp)
 target_link_libraries(tensorir graphcompiler)
+
+add_executable(graphir Ch7-GraphIR/graphir.cpp)
+target_link_libraries(graphir graphcompiler dnnl)

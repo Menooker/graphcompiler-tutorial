@@ -13,3 +13,6 @@ target_link_libraries(tensorir graphcompiler)
 
 add_executable(graphir Ch7-GraphIR/graphir.cpp)
 target_link_libraries(graphir graphcompiler dnnl)
+
+add_executable(graphlower Ch8-GraphLower/graphlower.cpp)
+target_link_libraries(graphlower graphcompiler dnnl)

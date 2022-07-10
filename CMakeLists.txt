@@ -16,3 +16,6 @@ target_link_libraries(graphir graphcompiler dnnl)
 
 add_executable(graphlower Ch8-GraphLower/graphlower.cpp)
 target_link_libraries(graphlower graphcompiler dnnl)
+
+add_executable(irvisitor Ch12-IRVisitor/irvisitor.cpp)
+target_link_libraries(irvisitor graphcompiler dnnl)
